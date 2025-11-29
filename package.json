@@ -34,6 +34,14 @@
     "esm",
     "cjs"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rish405/kind-of-modern.git"
+  },
+  "homepage": "https://github.com/rish405/kind-of-modern#readme",
+  "bugs": {
+    "url": "https://github.com/rish405/kind-of-modern/issues"
+  },
   "devDependencies": {
     "@types/node": "^24.10.1",
     "@vitest/coverage-v8": "^4.0.14",
