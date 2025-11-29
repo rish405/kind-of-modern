@@ -1,0 +1,46 @@
+{
+  "name": "kind-of-modern",
+  "version": "0.1.0",
+  "description": "Tiny zero-dependency utility that returns the lowercase type of any JavaScript value.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "bench": "npm run build && node bench/bench.mjs",
+    "prepublishOnly": "npm run build && npm run test && npm run typecheck"
+  },
+  "keywords": [
+    "type",
+    "kind-of",
+    "utility",
+    "typescript",
+    "esm",
+    "cjs"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@vitest/coverage-v8": "^4.0.14",
+    "kind-of": "^6.0.3",
+    "tinybench": "^5.1.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.14"
+  }
+}
